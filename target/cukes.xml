@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="12" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="430.255">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="18.469">
+        <system-out><![CDATA[Given User go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name and last name.....................................passed
+And user enter email field..................................................passed
+And user fills Password fields..............................................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="43.009">
+        <failure message="Compound class names not permitted&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.InvalidSelectorException"><![CDATA[Given user go to login page.................................................passed
+When user login with "test@example.com" and "P@ssw0rd"......................passed
+And user press on login button..............................................failed
+Then user login to the system successfully..................................skipped
+
+StackTrace:
+org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.example.pages.P02_login.loginButton(P02_login.java:25)
+	at org.example.stepDefs.D02_loginStepDef.submitLoginButton(D02_loginStepDef.java:29)
+	at ✽.user press on login button(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F02_Login.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="12.403">
+        <failure message="Compound class names not permitted&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.InvalidSelectorException"><![CDATA[Given user go to login page.................................................passed
+When user login with "wrong@example.com" and "P@ssw0rd".....................passed
+And user press on login button..............................................failed
+Then user could not login to the system.....................................skipped
+
+StackTrace:
+org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.<init>(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.example.pages.P02_login.loginButton(P02_login.java:25)
+	at org.example.stepDefs.D02_loginStepDef.submitLoginButton(D02_loginStepDef.java:29)
+	at ✽.user press on login button(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F02_Login.feature:12)
+]]></failure>
+    </testcase>
+    <testcase classname="F03_currencies | users could use Euro currency and view related products" name="user could selects Euro currency" time="12.883">
+        <system-out><![CDATA[Given user go to Home page..................................................passed
+When user selects Euro currency.............................................passed
+Then system display related products........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 | users will be able to search for products with different parameter." name="user could search using product name." time="27.535">
+        <failure message="class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.openqa.selenium.WebElement is in unnamed module of loader 'app')" type="java.lang.ClassCastException"><![CDATA[When when user clicks on search field.......................................passed
+And user search with "book".................................................passed
+Then user could find "book" relative results................................failed
+
+StackTrace:
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.openqa.selenium.WebElement is in unnamed module of loader 'app')
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find "book" relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="F04 | users will be able to search for products with different parameter." name="user could search using product name. 2" time="11.128">
+        <failure message="class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.openqa.selenium.WebElement is in unnamed module of loader 'app')" type="java.lang.ClassCastException"><![CDATA[When when user clicks on search field.......................................passed
+And user search with "laptop"...............................................passed
+Then user could find "laptop" relative results..............................failed
+
+StackTrace:
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.openqa.selenium.WebElement is in unnamed module of loader 'app')
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find "laptop" relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="F04 | users will be able to search for products with different parameter." name="user could search using product name. 3" time="81.15">
+        <failure message="class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.openqa.selenium.WebElement is in unnamed module of loader 'app')" type="java.lang.ClassCastException"><![CDATA[When when user clicks on search field.......................................passed
+And user search with "nike".................................................passed
+Then user could find "nike" relative results................................failed
+
+StackTrace:
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.openqa.selenium.WebElement is in unnamed module of loader 'app')
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find "nike" relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="F04 | users will be able to search for products with different parameter." name="user could search using product using sku." time="16.631">
+        <system-out><![CDATA[When when user clicks on search field.......................................passed
+And user search with "SCI_FAITH"............................................passed
+Then user could find "SCI_FAITH" inside product details page................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04 | users will be able to search for products with different parameter." name="user could search using product using sku. 2" time="15.183">
+        <failure message="expected [APPLE_CAM] but found [Apple]" type="java.lang.AssertionError"><![CDATA[When when user clicks on search field.......................................passed
+And user search with "APPLE_CAM"............................................passed
+Then user could find "APPLE_CAM" inside product details page................failed
+
+StackTrace:
+java.lang.AssertionError: expected [APPLE_CAM] but found [Apple]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindInsideProductDetailsPage(D04_searchStepDef.java:71)
+	at ✽.user could find "APPLE_CAM" inside product details page(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:16)
+]]></failure>
+    </testcase>
+    <testcase classname="F04 | users will be able to search for products with different parameter." name="user could search using product using sku. 3" time="15.473">
+        <failure message="expected [SF_PRO_11] but found [In stock]" type="java.lang.AssertionError"><![CDATA[When when user clicks on search field.......................................passed
+And user search with "SF_PRO_11"............................................passed
+Then user could find "SF_PRO_11" inside product details page................failed
+
+StackTrace:
+java.lang.AssertionError: expected [SF_PRO_11] but found [In stock]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindInsideProductDetailsPage(D04_searchStepDef.java:71)
+	at ✽.user could find "SF_PRO_11" inside product details page(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:16)
+]]></failure>
+    </testcase>
+    <testcase classname="F05 | users will be able to view the sub category for any main category." name="user could view Notebooks sub category under computer category." time="50.265">
+        <failure message="element not interactable&#10;  (Session info: chrome=105.0.5195.128)&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [57ab0c322a8ff051193f3bcbfa9eaa7d, clickElement {id=9101d2b3-1be2-4210-bffd-4df893dfa194}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59962/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (57ab0c322a8ff051193f3bcbfa9eaa7d)] -&gt; css selector: a[href=&quot;/notebooks&quot;]]&#10;Session ID: 57ab0c322a8ff051193f3bcbfa9eaa7d" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[Given user can hover on the computer category...............................passed
+When user clicks on notebooks subcategory...................................failed
+Then the system will open the subcategory details page "Notebooks"..........skipped
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=105.0.5195.128)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57ab0c322a8ff051193f3bcbfa9eaa7d, clickElement {id=9101d2b3-1be2-4210-bffd-4df893dfa194}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59962/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (57ab0c322a8ff051193f3bcbfa9eaa7d)] -> css selector: a[href="/notebooks"]]
+Session ID: 57ab0c322a8ff051193f3bcbfa9eaa7d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.stepDefs.D05_hoverCategoriesStepDef.userClicksOnNotebooksSubcategory(D05_hoverCategoriesStepDef.java:21)
+	at ✽.user clicks on notebooks subcategory(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F05_hoverCategories.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="F05 | users can redirect to the slider pages" name="first slider is clickable on home page" time="18.08">
+        <failure message="Expected condition failed: waiting for title to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current title: &quot;nopCommerce demo store&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60080}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60080/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f560af9f7c44f99acd6d2977413286eb" type="org.openqa.selenium.TimeoutException"><![CDATA[When user clicks into the first slider......................................failed
+Then system will navigate the user to the first slider details page.........skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "https://demo.nopcommerce.com/nokia-lumia-1020". Current title: "nopCommerce demo store" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-DAI6MGI', ip: '192.168.1.22', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60080}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60080/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f560af9f7c44f99acd6d2977413286eb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userClicksIntoTheFirstSlider(D06_homeSlidersStepDef.java:22)
+	at ✽.user clicks into the first slider(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:4)
+]]></failure>
+    </testcase>
+    <testcase classname="F05 | users can redirect to the slider pages" name="second slider is clickable on home page" time="7.087">
+        <failure message="Index 1 out of bounds for length 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user clicks into the second slider.....................................failed
+Then system will navigate the user to the second slider details page........skipped
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P03_homePage.secondSlider(P03_homePage.java:95)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userClicksIntoTheSecondSlider(D06_homeSlidersStepDef.java:36)
+	at ✽.user clicks into the second slider(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:8)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="9.751">
+        <system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="9.511">
+        <system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="9.135">
+        <failure message="Index 1 out of bounds for length 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens rss link....................................................failed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.skipped
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P03_homePage.switchToOpenedTab(P03_homePage.java:110)
+	at org.example.stepDefs.D07_followUsStepDef.userOpensRssLink(D07_followUsStepDef.java:35)
+	at ✽.user opens rss link(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F07_followUs.feature:12)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="10.377">
+        <system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08_wishList | users could save product into wishlist" name="user saves products into wishlist" time="9.238">
+        <failure message="expected [green] but found [null]" type="java.lang.AssertionError"><![CDATA[When user clicks on wishlist for "HTC One M8 Android L 5.0 Lollipop" product.passed
+Then user views the success msg.............................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [green] but found [null]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D08_WishlistStepDef.userViewsTheSuccessMsg(D08_WishlistStepDef.java:25)
+	at ✽.user views the success msg(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F08_Wishlist.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="F08_wishList | users could save product into wishlist" name="wishlist will contain the saved wish product" time="52.497">
+        <system-out><![CDATA[When user clicks on wishlist for "HTC One M8 Android L 5.0 Lollipop" product.passed
+Then wishlist link will have the saved wish product.........................passed
+]]></system-out>
+    </testcase>
+</testsuite>

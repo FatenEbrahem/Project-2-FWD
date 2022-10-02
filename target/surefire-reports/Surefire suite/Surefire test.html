@@ -1,0 +1,395 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/12/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 02 19:09:35 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>431 seconds (431053 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product using sku.", "F04 | users will be able to search for products with different parameter."</td>
+<td><div><pre>java.lang.AssertionError: expected [APPLE_CAM] but found [Apple]
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindInsideProductDetailsPage(D04_searchStepDef.java:71)
+	at ✽.user could find &quot;APPLE_CAM&quot; inside product details page(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:16)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1658064433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1658064433'><pre>java.lang.AssertionError: expected [APPLE_CAM] but found [Apple]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindInsideProductDetailsPage(D04_searchStepDef.java:71)
+	at ✽.user could find &quot;APPLE_CAM&quot; inside product details page(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:16)
+</pre></div></td>
+<td>15</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user saves products into wishlist", "F08_wishList | users could save product into wishlist"</td>
+<td><div><pre>java.lang.AssertionError: expected [green] but found [null]
+	at org.example.stepDefs.D08_WishlistStepDef.userViewsTheSuccessMsg(D08_WishlistStepDef.java:25)
+	at ✽.user views the success msg(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F08_Wishlist.feature:5)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace422266669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace422266669'><pre>java.lang.AssertionError: expected [green] but found [null]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D08_WishlistStepDef.userViewsTheSuccessMsg(D08_WishlistStepDef.java:25)
+	at ✽.user views the success msg(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F08_Wishlist.feature:5)
+</pre></div></td>
+<td>9</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with valid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.example.pages.P02_login.loginButton(P02_login.java:25)
+	at org.example.stepDefs.D02_loginStepDef.submitLoginButton(D02_loginStepDef.java:29)
+	at ✽.user press on login button(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F02_Login.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1977652583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1977652583'><pre>org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.example.pages.P02_login.loginButton(P02_login.java:25)
+	at org.example.stepDefs.D02_loginStepDef.submitLoginButton(D02_loginStepDef.java:29)
+	at ✽.user press on login button(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F02_Login.feature:6)
+</pre></div></td>
+<td>43</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could view Notebooks sub category under computer category.", "F05 | users will be able to view the sub category for any main category."</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=105.0.5195.128)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57ab0c322a8ff051193f3bcbfa9eaa7d, clickElement {id=9101d2b3-1be2-4210-bffd-4df893dfa194}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59962/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (57ab0c322a8ff051193f3bcbfa9eaa7d)] -&gt; css selector: a[href=&quot;/notebooks&quot;]]
+Session ID: 57ab0c322a8ff051193f3bcbfa9eaa7d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.stepDefs.D05_hoverCategoriesStepDef.userClicksOnNotebooksSubcategory(D05_hoverCategoriesStepDef.java:21)
+	at ✽.user clicks on notebooks subcategory(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F05_hoverCategories.feature:5)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1332104174", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1332104174'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=105.0.5195.128)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57ab0c322a8ff051193f3bcbfa9eaa7d, clickElement {id=9101d2b3-1be2-4210-bffd-4df893dfa194}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59962/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (57ab0c322a8ff051193f3bcbfa9eaa7d)] -&gt; css selector: a[href=&quot;/notebooks&quot;]]
+Session ID: 57ab0c322a8ff051193f3bcbfa9eaa7d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.stepDefs.D05_hoverCategoriesStepDef.userClicksOnNotebooksSubcategory(D05_hoverCategoriesStepDef.java:21)
+	at ✽.user clicks on notebooks subcategory(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F05_hoverCategories.feature:5)
+</pre></div></td>
+<td>50</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "first slider is clickable on home page", "F05 | users can redirect to the slider pages"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current title: &quot;nopCommerce demo store&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60080}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60080/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f560af9f7c44f99acd6d2977413286eb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userClicksIntoTheFirstSlider(D06_homeSlidersStepDef.java:22)
+	at ✽.user clicks into the first slider(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace581225034", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace581225034'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current title: &quot;nopCommerce demo store&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.128, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\ALEX-S~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60080}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60080/devtoo..., se:cdpVersion: 105.0.5195.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f560af9f7c44f99acd6d2977413286eb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userClicksIntoTheFirstSlider(D06_homeSlidersStepDef.java:22)
+	at ✽.user clicks into the first slider(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:4)
+</pre></div></td>
+<td>18</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "second slider is clickable on home page", "F05 | users can redirect to the slider pages"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P03_homePage.secondSlider(P03_homePage.java:95)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userClicksIntoTheSecondSlider(D06_homeSlidersStepDef.java:36)
+	at ✽.user clicks into the second slider(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace419441460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace419441460'><pre>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P03_homePage.secondSlider(P03_homePage.java:95)
+	at org.example.stepDefs.D06_homeSlidersStepDef.userClicksIntoTheSecondSlider(D06_homeSlidersStepDef.java:36)
+	at ✽.user clicks into the second slider(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:8)
+</pre></div></td>
+<td>7</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name.", "F04 | users will be able to search for products with different parameter."</td>
+<td><div><pre>java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader &apos;bootstrap&apos;; org.openqa.selenium.WebElement is in unnamed module of loader &apos;app&apos;)
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find &quot;book&quot; relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace252339901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace252339901'><pre>java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader &apos;bootstrap&apos;; org.openqa.selenium.WebElement is in unnamed module of loader &apos;app&apos;)
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find &quot;book&quot; relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div></td>
+<td>27</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens rss link", "F07_followUs | users could open followUs links"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P03_homePage.switchToOpenedTab(P03_homePage.java:110)
+	at org.example.stepDefs.D07_followUsStepDef.userOpensRssLink(D07_followUsStepDef.java:35)
+	at ✽.user opens rss link(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F07_followUs.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2086611398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2086611398'><pre>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P03_homePage.switchToOpenedTab(P03_homePage.java:110)
+	at org.example.stepDefs.D07_followUsStepDef.userOpensRssLink(D07_followUsStepDef.java:35)
+	at ✽.user opens rss link(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F07_followUs.feature:12)
+</pre></div></td>
+<td>9</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name.", "F04 | users will be able to search for products with different parameter."</td>
+<td><div><pre>java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader &apos;bootstrap&apos;; org.openqa.selenium.WebElement is in unnamed module of loader &apos;app&apos;)
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find &quot;nike&quot; relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1379563521", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1379563521'><pre>java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader &apos;bootstrap&apos;; org.openqa.selenium.WebElement is in unnamed module of loader &apos;app&apos;)
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find &quot;nike&quot; relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div></td>
+<td>81</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.example.pages.P02_login.loginButton(P02_login.java:25)
+	at org.example.stepDefs.D02_loginStepDef.submitLoginButton(D02_loginStepDef.java:29)
+	at ✽.user press on login button(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F02_Login.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1090160486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1090160486'><pre>org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-DAI6MGI&apos;, ip: &apos;192.168.1.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:310)
+	at org.openqa.selenium.By.className(By.java:100)
+	at org.example.pages.P02_login.loginButton(P02_login.java:25)
+	at org.example.stepDefs.D02_loginStepDef.submitLoginButton(D02_loginStepDef.java:29)
+	at ✽.user press on login button(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F02_Login.feature:12)
+</pre></div></td>
+<td>12</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product using sku.", "F04 | users will be able to search for products with different parameter."</td>
+<td><div><pre>java.lang.AssertionError: expected [SF_PRO_11] but found [In stock]
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindInsideProductDetailsPage(D04_searchStepDef.java:71)
+	at ✽.user could find &quot;SF_PRO_11&quot; inside product details page(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:16)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace569235601", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace569235601'><pre>java.lang.AssertionError: expected [SF_PRO_11] but found [In stock]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindInsideProductDetailsPage(D04_searchStepDef.java:71)
+	at ✽.user could find &quot;SF_PRO_11&quot; inside product details page(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:16)
+</pre></div></td>
+<td>15</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name.", "F04 | users will be able to search for products with different parameter."</td>
+<td><div><pre>java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader &apos;bootstrap&apos;; org.openqa.selenium.WebElement is in unnamed module of loader &apos;app&apos;)
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find &quot;laptop&quot; relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2090953436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2090953436'><pre>java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.openqa.selenium.WebElement (java.util.ArrayList is in module java.base of loader &apos;bootstrap&apos;; org.openqa.selenium.WebElement is in unnamed module of loader &apos;app&apos;)
+	at org.example.pages.P03_homePage.searchResult(P03_homePage.java:52)
+	at org.example.stepDefs.D04_searchStepDef.userCouldFindRelativeResults(D04_searchStepDef.java:57)
+	at ✽.user could find &quot;laptop&quot; relative results(file:///D:/FWD%20Course%20Projects/Automation%20Project/Project2-Automation/demonopcommerce/src/main/resources/features/F04_Search.feature:6)
+</pre></div></td>
+<td>11</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens twitter link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>9</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user could register with valid data successfully", "F01_Register | users could register with new accounts"</td>
+<td></td>
+<td>18</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could selects Euro currency", "F03_currencies | users could use Euro currency and view related products"</td>
+<td></td>
+<td>12</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens youtube link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens facebook link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>9</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "wishlist will contain the saved wish product", "F08_wishList | users could save product into wishlist"</td>
+<td></td>
+<td>52</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product using sku.", "F04 | users will be able to search for products with different parameter."</td>
+<td></td>
+<td>16</td>
+<td>org.example.testRunner.runners@2f7298b</td></tr>
+</table><p>
+</body>
+</html>
